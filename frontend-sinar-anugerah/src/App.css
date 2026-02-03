@@ -1041,42 +1041,30 @@ body {
 
 
 
-/* ================= RESPONSIVE PRODUK (FIXED) ================= */
+/* ================= RESPONSIVE PRODUK ================= */
 
 @media (max-width: 1200px) {
   .grid-layout {
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom untuk layar medium */
   }
 }
 
 @media (max-width: 992px) {
   .grid-layout {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom untuk tablet */
   }
   .hero-content {
     flex-direction: column;
     text-align: center;
-    gap: 30px;
-  }
-  .products-hero-section {
-    padding: 100px 5% 40px; /* Kurangi padding samping di tablet */
   }
 }
 
 @media (max-width: 600px) {
   .grid-layout {
-    grid-template-columns: 1fr; 
-    gap: 20px;
+    grid-template-columns: 1fr; /* 1 kolom untuk HP */
   }
   .hero-text-box h1 {
-    font-size: 2.2rem; /* Ukuran ideal untuk HP */
-    margin-bottom: 15px;
-  }
-  .product-image-frame {
-    height: 250px; 
-  }
-  .search-wrapper-hero {
-    max-width: 100%; /* Search bar jadi selebar layar HP */
+    font-size: 2.5rem;
   }
 }
 
