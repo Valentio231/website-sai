@@ -55,22 +55,21 @@ body::before {
   margin: 0 auto;
 }
 
+.navbar-logo-img {
+  height: 40px;           
+  width: auto;           
+  object-fit: contain;
+  margin-right: 5px;      
+}
+
 .navbar-brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 5px;              
   color: #1b5e20 !important;
   font-weight: 700;
-  text-decoration: none !important; 
-  font-size: 1.1rem;
-}
-
-.logo {
-  background: #1b5e20;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 8px;
-  font-size: 0.9rem;
+  text-decoration: none !important;
+  font-size: 1rem;
 }
 
 /* Menu Navigasi Menempel di Layar */

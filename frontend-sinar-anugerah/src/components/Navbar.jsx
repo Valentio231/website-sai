@@ -26,11 +26,16 @@ function Navbar() {
           className="navbar-brand"
           onClick={() => handleClick("/")}
         >
-          <span className="logo">SAI</span>
-          <span className="brand-name">
-            PT. SINAR ANUGERAH INDUSTRI
-          </span>
-        </Link>
+<img 
+    src="/logo1.png" 
+    alt="Logo SAI" 
+    className="navbar-logo-img" 
+  />
+  <span className="brand-name">
+    PT. SINAR ANUGERAH INDUSTRI
+  </span>
+</Link>
+
 
         {/* MENU - Akan sembunyi di HP kecuali jika menuOpen bernilai true */}
         <ul className={`navbar-menu ${menuOpen ? "active" : ""}`}>
