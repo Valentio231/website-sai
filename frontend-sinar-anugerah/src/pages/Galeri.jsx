@@ -41,7 +41,7 @@ function Galeri() {
           <div className="photo-cluster">
             <img src="/produk1.jpeg" className="scatter-img p1" alt="Produksi" />
             <img src="/produk2.jpeg" className="scatter-img p2" alt="Mesin" />
-            <img src="/produk3.jpeg" className="scatter-img p3" alt="Hasil" />
+            <img src="/produk3.jpeg" className="scatter-img g3" alt="Hasil" />
           </div>
         </div>
       </section>
@@ -59,7 +59,7 @@ function Galeri() {
           <div className="photo-cluster">
             <img src="/pengiriman1.jpeg" className="scatter-img p1" alt="Produksi" />
             <img src="/pengiriman2.jpeg" className="scatter-img p2" alt="Mesin" />
-            <img src="/pengiriman3.jpeg" className="scatter-img p3" alt="Hasil" />
+            <img src="/pengiriman3.jpeg" className="scatter-img p4" alt="Hasil" />
           </div>
         </div>
       </section>

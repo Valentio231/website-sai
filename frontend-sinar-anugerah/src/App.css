@@ -874,11 +874,11 @@ body::before {
   background: white;
   width: 90%;
   max-width: 950px;
-  max-height: 90vh;
+  max-height: 90vh; /* Membatasi tinggi modal agar tidak melebihi layar laptop */
   border-radius: 40px;
-  padding: 60px;
+  padding: 40px 60px; /* Padding atas-bawah dikurangi sedikit dari 60px */
   position: relative;
-  overflow: hidden; /* Header tetap, body scroll */
+  overflow-y: auto; /* KUNCI: Aktifkan scroll vertikal jika konten penuh */
   box-shadow: 0 40px 100px rgba(0,0,0,0.4);
   animation: modalPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -912,9 +912,9 @@ body::before {
 }
 
 .detail-title-text h2 {
-  font-size: 3.2rem;
+  font-size: 2.5rem; /* Dikurangi dari 3.2rem agar lebih hemat ruang */
   color: #1b5e20;
-  margin: 10px 0;
+  margin: 5px 0; /* Dikurangi marginnya */
   line-height: 1.1;
 }
 
@@ -930,9 +930,14 @@ body::before {
     overflow-y: auto;
   }
   .detail-img-wrapper {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
+    flex: 0 0 280px; /* Dikurangi dari 320px */
+    height: 280px;    /* Dikurangi dari 320px */
+    background: #f4faf6;
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
   }
 }
 
@@ -974,6 +979,7 @@ body::before {
 .gallery-grid {
   display: flex;
   gap: 12px;
+  flex-wrap: wrap; /* Tambahkan ini agar warna otomatis turun ke bawah jika sempit */
 }
 
 .gallery-item {
@@ -1341,12 +1347,12 @@ body::before {
 /* Grup Gudang */
 .g1 { top: -80px; right: 10%; transform: rotate(-8deg); }
 .g2 { bottom: -50px; left: -30px; transform: rotate(15deg); }
-.g3 { bottom: -30px; right: -40px; transform: rotate(-5deg); }
+.g3 { bottom: -110px; right: -40px; transform: rotate(-5deg); }
 
 /* Grup Pengiriman */
 .l1 { top: -50px; left: 10%; transform: rotate(8deg); }
 .l2 { bottom: -80px; right: 15%; transform: rotate(-10deg); }
-.l3 { top: 40%; right: -60px; transform: rotate(15deg); }
+.l3 { top: 10%; right: 180px; transform: rotate(15deg); }
 
 /* Responsif Mobile */
 @media (max-width: 992px) {

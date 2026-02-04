@@ -60,21 +60,20 @@ function ProductCard({ product }) {
             </div>
 
             <div className="modal-right-column">
-              <div className="detail-header-info">
-                <span className="detail-subtitle">
-                  {product.material || "PREMIUM"} Series | {product.modelCode || "Original"}
-                </span>
+              <div className="detail-header-info">           
                 <h2>{product.name}</h2>
               </div>
 
               <div className="benefits-container">
                 <h3>Keuntungan</h3>
                 <ul className="benefits-list">
-                  <li>Kapasitas besar sesuai tipe</li>
+                  <li>Kapasitas besar 2 liter</li>
                   <li>Tahan panas hingga 48 jam</li>
                   <li>Tabung dengan kualitas terbaik</li>
                   <li>Bahan Food Grade</li>
-                  <li>Anti tumpah & Tahan lama</li>
+                  <li>Anti tumpah</li>
+                  <li>Mudah dibawah kemana saja</li>
+                  <li>Tahan panas & Tahan lama</li>
                 </ul>
               </div>
             </div>

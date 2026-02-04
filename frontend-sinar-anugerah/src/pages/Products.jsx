@@ -5,8 +5,8 @@ import ProductCard from "../components/ProductCard";
 const STATIC_PRODUCTS = [
   {
     id: 1,
-    name: "Termos Elephant Gold - GREEN",
-    description: "Green Series ~ HTC-777. Koleksi elegan dengan teknologi vakum tinggi.",
+    name: "Termos Elephant Gold YOU AND ME - GREEN Series ~ HTC-777 ",
+    description: "Green",
     image: "Green Series ~ HTC-777 (hijau).PNG",
     variants: [
       { name: "GREEN", file: "Green Series ~ HTC-777 (hijau).PNG" },
@@ -16,8 +16,8 @@ const STATIC_PRODUCTS = [
   },
   {
     id: 2,
-    name: "Termos Elephant Gold - RED",
-    description: "Rose Series ~ HPC-888T. Desain bunga yang menawan dan tahan panas lama.",
+    name: "Termos Elephant Gold YOU AND ME - ROSE Series ~ HPC-88T",
+    description: "Red",
     image: "Rose Series ~ HPC-888T (merah).PNG",
     variants: [
       { name: "RED", file: "Rose Series ~ HPC-888T (merah).PNG" },
@@ -27,8 +27,8 @@ const STATIC_PRODUCTS = [
   },
   {
     id: 3,
-    name: "Termos Elephant Gold - PINK",
-    description: "Golf Series ~ HPC-777T. Warna pink lembut yang sangat populer.",
+    name: "Termos Elephant Gold YOU AND ME - GOLF Series ~ HPC-777T",
+    description: "Pink",
     image: "Golf Series ~ HPC-777T (pink).PNG",
     variants: [
       { name: "PINK", file: "Golf Series ~ HPC-777T (pink).PNG" },
@@ -39,8 +39,8 @@ const STATIC_PRODUCTS = [
   },
   {
     id: 4,
-    name: "Termos Elephant Gold - BLUE",
-    description: "Dahlia Series ~ DPC-888. Kesan sejuk dan minimalis untuk kebutuhan Anda.",
+    name: "Termos Elephant Gold YOU AND ME - DAHLIA Series ~ DPC-888",
+    description: "Blue",
     image: "Dahlia Series ~ DPC-888 (biru).PNG",
     variants: [
       { name: "BIRU", file: "Dahlia Series ~ DPC-888 (biru).PNG" },
@@ -50,8 +50,8 @@ const STATIC_PRODUCTS = [
   },
   {
     id: 5,
-    name: "Termos Elephant Gold - PREMIUM",
-    description: "Premium Series ~ HPC-888T. Kualitas terbaik untuk penggunaan jangka panjang.",
+    name:"Termos Elephant Gold YOU AND ME - RUBY Series ~ DSC-777",
+    description: "Red",
     image: "Ruby Series ~ DSC-777 (merah).PNG",
     variants: [
       { name: "RED", file: "Ruby Series ~ DSC-777 (merah).PNG" },
@@ -62,8 +62,8 @@ const STATIC_PRODUCTS = [
   },
   {
     id: 6,
-    name: "Termos Elephant Gold - SAKURA",
-    description: "Sakura Series ~ APC-888. Edisi khusus dengan motif bunga sakura.",
+    name: "Termos Elephant Gold YOU AND ME - SAKURA Series ~ APC-888",
+    description: "Blue",
     image: "Sakura Series ~ APC-888 (biru).PNG",
     variants: [
       { name: "BLUE", file: "Sakura Series ~ APC-888 (biru).PNG" },
