@@ -102,6 +102,8 @@ body::before {
 }
 
 
+
+
 /* ================= CONTENT & HERO ================= */
 .content {
   position: relative;
@@ -361,12 +363,7 @@ body::before {
   margin: 0;
 }
 
-/* POSISI SPESIFIK (Disesuaikan dengan Path SVG 0-1000 x 0-400)
-   m-1: di jalur tengah awal
-   m-2: di jalur bawah pertama
-   m-3: di jalur atas
-   m-4: di jalur bawah kedua
-*/
+
 
 /* m-1: Tahun 2020 */
 .m-1 { left: -6%; top: 29%; }
@@ -691,70 +688,44 @@ body::before {
   }
 }
 
-/* ================= MOBILE RESPONSIVE (UPDATE) ================= */
+/* ================= MOBILE RESPONSIVE (PERBAIKAN) ================= */
 @media (max-width: 992px) {
-  /* Navbar Adjustment */
-  .navbar {
-    padding: 15px 5%; /* Padding lebih kecil di HP */
+  
+  /* 1. MUNCULKAN TOMBOL HAMBURGER */
+  .hamburger-menu {
+    display: block !important; /* Memaksa muncul di HP */
+    position: relative;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #1b5e20;
+    z-index: 2001;
   }
 
-.navbar-menu {
-    display: none; /* Sembunyikan menu standar */
+  /* 2. ATUR ULANG MENU AGAR JADI DROPDOWN */
+  .navbar-menu {
+    display: none; /* Sembunyikan menu standar baris */
     flex-direction: column;
     position: absolute;
-    top: 100%;
+    top: 80px; /* Jarak dari atas navbar */
     left: 0;
     width: 100%;
-    background: white;
-    padding: 20px;
+    background: white; /* Beri background agar tulisan terbaca */
+    padding: 30px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  }
-
-.navbar-menu.active {
-    display: flex; /* Aktifkan jika tombol hamburger diklik */
-  }
-
-.profile-hero-container {
-    flex-direction: column !important; /* Gambar & Teks bertumpuk */
+    gap: 20px;
     text-align: center;
-    padding: 100px 5% 40px;
+    z-index: 2000;
   }
 
-.profile-text h2 {
-    font-size: 2.2rem !important; /* Kecilkan judul raksasa 4.2rem */
-    line-height: 1.2;
+  /* 3. TAMPILKAN MENU SAAT AKTIF */
+  .navbar-menu.active {
+    display: flex; /* Muncul saat state menuOpen di React bernilai true */
   }
 
-  .profile-text p {
-    font-size: 1rem;
-    margin: 0 auto;
-  }
-  
-  
-  .directors-container {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  /* Footer di HP (Stacking Tengah) */
-  .footer-container {
-    flex-direction: column;
-    gap: 30px;
-    text-align: center;
-  }
-
-  .footer-brand-section {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .milestone-svg { display: none; }
-  .milestone-item { 
-    position: relative !important; 
-    left: 0 !important; 
-    top: 0 !important; 
-    margin-bottom: 30px; 
-    width: 100%;
+  /* Penyesuaian Brand Name agar tidak menabrak hamburger di layar kecil */
+  .brand-name {
+    font-size: 0.8rem;
+    max-width: 150px;
   }
 }
 
