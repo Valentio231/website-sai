@@ -90,7 +90,7 @@ function Products() {
       <header className="products-hero-section">
         <div className="hero-content">
           <div className={`hero-text-box fade-in ${isVisible ? "visible" : ""}`}>
-            <h1>Koleksi Pameran Produk</h1>
+            <h1>Koleksi Produk Kami</h1>
             <p>Menampilkan seluruh varian unggulan kami secara eksklusif.</p>
             {/* Fitur Search sudah dihapus dari sini */}
           </div>
