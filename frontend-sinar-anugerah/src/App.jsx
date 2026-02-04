@@ -1,4 +1,4 @@
-  import { Routes, Route, useLocation, Link } from "react-router-dom";
+import { Routes, Route, useLocation, Link } from "react-router-dom";
   import { useEffect, useState } from "react"; 
   import Navbar from "./components/Navbar";
   import "./App.css";
@@ -9,6 +9,11 @@
   function App() {
     const location = useLocation();
     const [isExpanded, setIsExpanded] = useState(false);
+
+useEffect(() => {
+  window.scrollTo(0, 0);
+}, [location.pathname]); 
+
 
     const fullText = `Selamat Datang di PT. Sinar Anugerah Industri, mitra terpercaya anda dalam solusi termal inovatif. Sebagai produsen termos berkualitas tinggi terkemuka, kami berkomitmen untuk meningkatkan pengalaman sehari-hari anda dengan produk yang menggabungkan fungsionalitas, daya tahan dan gaya. Dengan tim profesional terampil yang bersemangat memberikan produk unggulan dan layanan pelanggan yang luar biasa, kami memastikan bahwa setiap termos memenuhi standar kinerja dan keandalan tertinggi. Terima kasih telah memilih PT. Sinar Anugerah Industri, dimana inovasi bertemu tradisi, dan kualitas adalah janji kami kepada anda.`;
 
@@ -64,7 +69,7 @@
                       <h3>MISI</h3>
                       <ul className="misi-list">
                         <li>Menghasilkan termos berkualitas sesuai kebutuhan konsumen.</li>
-                        <li>Menciptakan desain termos yan inovatif dan menarik.</li>
+                        <li>Menciptakan desain termos yan inovatif and menarik.</li>
                         <li>Menerapkan praktik bisnis yang sesuai standard yang berlaku untuk proses produksi.</li>
                         <li>Membangun brand termos yang kuat dan terpercaya di Indonesia.</li>
                         <li>Menyediakan layanan pelanggan yang bagus sekali untuk menjaga kepuasan kosumen.</li>
