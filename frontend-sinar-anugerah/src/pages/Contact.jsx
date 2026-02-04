@@ -32,7 +32,7 @@ function Contact() {
             
             {/* Tautan WhatsApp: Otomatis masuk ke ruang chat */}
             <p>
-              Telepon: <a 
+              WhatsApp: <a 
                 href="https://wa.me/628133717142" 
                 target="_blank" 
                 rel="noopener noreferrer" 

@@ -1191,10 +1191,11 @@ body::before {
 
 /* ================= CONTACT PAGE (FIXED & ALIGNED) ================= */
 .contact-page-container {
+  position: relative; 
+  z-index: 1;
   width: 100%;
   min-height: 100vh;
-  /* Gunakan gradient agar senada dengan halaman lainnya */
-  background: radial-gradient(circle at top right, #d4e9d7 0%, #ffffff 70%) !important;
+  background: transparent !important; /* Ubah ke transparan */
 }
 
 .contact-hero {
