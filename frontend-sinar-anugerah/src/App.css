@@ -518,20 +518,24 @@ body::before {
   transform: translateY(0);
 }
 
-/* ================= FOOTER RAPI & MODERN ================= */
+/* ================= FOOTER RAPI & MODERN (UPDATED) ================= */
 .footer-main {
   background: #1b5e20;
   color: white;
   padding: 60px 0 20px;
   margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 8%;
   display: flex;
-  justify-content: space-between; /* Memisahkan Logo di kiri & Sosmed di kanan */
+  justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-bottom: 40px;
@@ -543,7 +547,6 @@ body::before {
   gap: 20px;
 }
 
-/* Kotak SAI Putih kecil agar konsisten dengan Navbar */
 .footer-logo-box {
   background: white;
   color: #1b5e20;
@@ -566,19 +569,14 @@ body::before {
   margin: 0;
 }
 
-/* ================= FOOTER MENU NAV (NEW) ================= */
-.footer-menu-section {
-  display: flex;
-  align-items: center;
-}
-
+/* ================= MENU NAV ================= */
 .footer-nav {
   display: flex;
-  gap: 30px; /* Jarak antar menu */
+  gap: 30px;
 }
 
 .footer-link {
-  color: rgba(255, 255, 255, 0.8); /* Warna putih agak transparan */
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 500;
@@ -587,44 +585,78 @@ body::before {
 }
 
 .footer-link:hover {
-  color: #ffffff; /* Putih terang saat hover */
-  opacity: 1;
+  color: #ffffff;
 }
 
-/* Garis bawah tipis saat hover */
-.footer-link::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -5px;
-  left: 0;
-  background-color: #4caf50;
-  transition: width 0.3s ease;
-}
-
-.footer-link:hover::after {
+/* ================= LEGALITAS SECTION (NEW) ================= */
+/* Bagian khusus untuk menampilkan logo legalitas di Footer */
+.footer-legal-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
+  padding: 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Penyesuaian Responsif Mobile */
-@media (max-width: 768px) {
-  .footer-nav {
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .footer-link {
-    font-size: 0.85rem;
-  }
+.legal-title-footer {
+  font-size: 11px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
 }
 
+.legal-badges-container {
+  display: flex;
+  gap: 30px;
+  background: white; /* Memberikan latar putih agar logo (yang biasanya gelap) terlihat jelas */
+  padding: 15px 35px;
+  border-radius: 10px;
+}
+
+.legal-badge-img {
+  height: 45px; /* Sesuaikan tinggi logo agar seragam */
+  width: auto;
+  object-fit: contain;
+}
+
+/* Ukuran gambar sertifikat */
+.certificate-img-large {
+  height: 300px; /* Ubah angka ini jika ingin lebih besar lagi (contoh: 200px atau 250px) */
+  width: auto;
+  display: block;
+}
+
+/* ================= COPYRIGHT ================= */
 .footer-copyright {
+  width: 100%;
   text-align: center;
   padding-top: 20px;
   font-size: 0.85rem;
   opacity: 0.6;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsif Mobile */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+  .footer-nav {
+    gap: 15px;
+    justify-content: center;
+  }
+  .legal-badges-container {
+    gap: 20px;
+    padding: 10px 20px;
+  }
+  .legal-badge-img {
+    height: 30px;
+  }
 }
 
 /* ================= MOBILE RESPONSIVE (UPDATE) ================= */
