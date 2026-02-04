@@ -15,6 +15,24 @@ body {
   overflow-x: hidden;
 }
 
+/* --- TAMBAHKAN KODE WATERMARK DI SINI --- */
+body::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px; /* Ukuran bisa disesuaikan */
+  height: 450px;
+  background-image: url('/logo.png'); /* Pastikan file ada di folder public */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.04; /* Level pudar (sangat halus agar tetap profesional) */
+  z-index: -1; 
+  pointer-events: none;
+}
+
 
 /* ================= NAVBAR (BORDERLESS / TANPA KOTAK) ================= */
 .navbar {

@@ -127,22 +127,22 @@ function App() {
 
                   <div className="milestone-item m-2 fade-in">
                     <div className="milestone-card">
-                      <span className="year">2015</span>
+                      <span className="year">2022</span>
                       <p>Resmi menjadi PT. Sinar Anugerah Industri.</p>
                     </div>
                   </div>
 
                   <div className="milestone-item m-3 fade-in">
                     <div className="milestone-card">
-                      <span className="year">2020</span>
-                      <p>Resmi menjalin dengan teknologi vakum modern.</p>
+                      <span className="year">2023</span>
+                      <p>Resmi memulai produksi termos dengan penggunaan vacum chamber.</p>
                     </div>
                   </div>
 
                   <div className="milestone-item m-4 fade-in">
                     <div className="milestone-card">
-                      <span className="year">2025</span>
-                      <p>Peluncuran seri karakter termos lucu untuk keluarga.</p>
+                      <span className="year">2024</span>
+                      <p>Resmi pendistribusian seri termos elephant gold (YOU and ME) ke seluruh Indonesia.</p>
                     </div>
                   </div>
                 </div>
