@@ -267,120 +267,152 @@ body::before {
   padding: 100px 8%;
   background: transparent;
   position: relative;
+  overflow: hidden; /* Mencegah elemen keluar jalur */
 }
 
 .milestone-title {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 800;
   color: #1b5e20;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
+  text-align: center;
 }
 
 /* Container utama untuk menampung Garis dan Kartu */
 .milestone-container {
   position: relative;
-  max-width: 1200px;
-  height: 500px; /* Atur tinggi agar pas dengan kurva */
+  max-width: 1100px;
+  height: 500px; /* Tinggi ditingkatkan agar pas dengan lekukan vertikal */
   margin: 0 auto;
-  display: flex;
-  align-items: center;
 }
 
-/* Pastikan SVG garis berada di belakang kartu */
+/* SVG garis - Menempati seluruh area container */
 .milestone-svg {
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 0;
   width: 100%;
-  transform: translateY(-50%);
+  height: 100%;
   z-index: 1;
 }
 
 .milestone-path-bg {
-  stroke: #a5d6a7; /* Warna hijau muda halus */
-  stroke-width: 4;
+  stroke: #1b5e20; /* Ganti dari #00A9B5 ke Hijau */
+  stroke-width: 10;
   fill: none;
-  opacity: 0.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 1; /* Naikkan opacity agar warna hijaunya tegas */
 }
 
-/* Mengatur Kartu agar menyebar mengikuti alur garis */
+/* Mengatur Kartu Milestone */
 .milestone-item {
   position: absolute;
   z-index: 2;
-  width: 280px;
+  width: 260px;
+  transition: all 0.4s ease;
 }
 
-/* Menambahkan pin lingkaran kecil di pojok kiri atas setiap kotak */
 .milestone-card {
   position: relative;
   background: #ffffff;
-  padding: 25px;
-  border-radius: 25px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  border: 1px solid rgba(27, 94, 32, 0.05);
-  margin-top: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 169, 181, 0.1);
 }
 
-/* KODE UTAMA UNTUK PIN LINGKARAN */
+
 .milestone-card::before {
   content: "";
   position: absolute;
-  /* Mengatur posisi tepat di tengah atas */
-  top: -8px;           /* Setengah lingkaran keluar dari kotak */
-  left: 50%;           /* Geser ke tengah */
-  transform: translateX(-50%); /* Pastikan benar-benar center */
-  
-  /* Ukuran dibuat lebih kecil sesuai permintaan */
-  width: 16px;         
-  height: 16px;        
-  
-  background-color: #1b5e20; /* Warna hijau gelap */
-  border: 3px solid #ffffff;  /* Garis tepi putih kecil */
-  border-radius: 50%;         /* Menjadi lingkaran */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 18px;
+  background-color: #1b5e20; /* Ganti ke Hijau yang sama dengan garis */
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   z-index: 5;
 }
 
+/* Hover Effect */
 .milestone-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 169, 181, 0.15);
 }
 
-.milestone-card h3 {
-  color: #1b5e20;
-  font-size: 1.5rem;
+.milestone-card .year {
+  display: inline-block;
+  background: #e0f2f1;
+  color: #00796b;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.85rem;
   margin-bottom: 10px;
-  font-weight: 800;
 }
 
 .milestone-card p {
-  color: #4a634d;
-  font-size: 0.95rem;
+  color: #444;
+  font-size: 0.9rem;
   line-height: 1.5;
+  margin: 0;
 }
 
-/* POSISI SPESIFIK: Atur ini agar kartu menempel di lekukan garis */
-.m-1 { left: -10%; top: 14%; }    /* Kartu pertama di atas */
-.m-2 { left: 20%; top: 64%; }   /* Kartu kedua di bawah kurva */
-.m-3 { left: 58%; top: 20%; }   /* Kartu ketiga di atas kurva */
-.m-4 { left: 85%; top: 65%; }   /* Kartu keempat di ujung bawah */
+/* POSISI SPESIFIK (Disesuaikan dengan Path SVG 0-1000 x 0-400)
+   m-1: di jalur tengah awal
+   m-2: di jalur bawah pertama
+   m-3: di jalur atas
+   m-4: di jalur bawah kedua
+*/
 
-/* Responsif untuk Mobile */
+/* m-1: Tahun 2020 */
+.m-1 { left: -6%; top: 29%; }
+.m-1 .milestone-card::before { bottom: -9px; } /* Dot di bawah kartu */
+
+/* m-2: Tahun 2022 */
+.m-2 { left: 14%; top: 80%; }
+.m-2 .milestone-card::before { top: -9px; } /* Dot di atas kartu */
+
+/* m-3: Tahun 2024 */
+.m-3 { left: 40%; top: -8%; }
+.m-3 .milestone-card::before { bottom: -9px; } /* Dot di bawah kartu */
+
+/* m-4: Tahun 2025 */
+.m-4 { left: 65%; top: 80%; }
+.m-4 .milestone-card::before { top: -9px; } /* Dot di atas kartu */
+
+
+/* ================= RESPONSIVE MOBILE ================= */
 @media (max-width: 992px) {
   .milestone-container {
     height: auto;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
+    padding-left: 20px;
+    border-left: 4px solid #00A9B5; /* Ganti garis SVG jadi garis vertikal simpel */
   }
+
+  .milestone-svg { display: none; }
+
   .milestone-item {
     position: relative !important;
     left: 0 !important;
     top: 0 !important;
     width: 100%;
+    max-width: 400px;
   }
-  .milestone-svg { display: none; } /* Sembunyikan garis di mobile agar tidak berantakan */
-}
 
+  .milestone-card::before {
+    left: -31px; /* Pindahkan dot ke kiri menempel di border-left */
+    top: 50% !important;
+    bottom: auto !important;
+    transform: translateY(-50%);
+  }
+}
 /* ================= DISTRIBUTION SECTION (PESEBARAN KAMI) ================= */
 .distribution-wrapper {
   padding: 100px 8%;
@@ -661,37 +693,43 @@ body::before {
 
 /* ================= MOBILE RESPONSIVE (UPDATE) ================= */
 @media (max-width: 992px) {
-  /* Munculkan Hamburger di HP */
-  .hamburger-menu {
-    display: block; 
+  /* Navbar Adjustment */
+  .navbar {
+    padding: 15px 5%; /* Padding lebih kecil di HP */
   }
 
-  /* Navbar Menu di HP (Drop Down) */
-  .navbar-menu {
-    display: none; 
+.navbar-menu {
+    display: none; /* Sembunyikan menu standar */
     flex-direction: column;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
     background: white;
-    padding: 30px;
-    gap: 20px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+
+.navbar-menu.active {
+    display: flex; /* Aktifkan jika tombol hamburger diklik */
+  }
+
+.profile-hero-container {
+    flex-direction: column !important; /* Gambar & Teks bertumpuk */
     text-align: center;
+    padding: 100px 5% 40px;
   }
 
-  .navbar-menu.active {
-    display: flex; /* Muncul saat tombol diklik */
+.profile-text h2 {
+    font-size: 2.2rem !important; /* Kecilkan judul raksasa 4.2rem */
+    line-height: 1.2;
   }
 
-  .profile-hero-container {
-    flex-direction: column;
-    text-align: center;
-    padding: 120px 5% 60px;
+  .profile-text p {
+    font-size: 1rem;
+    margin: 0 auto;
   }
-
-  .profile-text h2 { font-size: 2.8rem; }
+  
   
   .directors-container {
     flex-wrap: wrap;
